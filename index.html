@@ -2,354 +2,485 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0b0e">
-<title>MUSTAFA NEX | الموقع الشخصي</title>
-<meta name="description" content="MUSTAFA NEX - مؤسس ومطور مشاريع تقنية، متخصص في تطوير المواقع والتطبيقات والأنظمة البرمجية.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="MUSTAFA NEX - مبرمج ومطوّر برمجيات ومشاريع تقنية من العراق، الموصل.">
+  <title>MUSTAFA NEX | Official Website</title>
 
-<style>
-:root {
- --red:#f12d42;
- --bg:#0b0b0e;
- --panel:#15151b;
- --text:#f4f4f5;
- --muted:#aaa;
-}
-* {box-sizing:border-box}
-html {scroll-behavior:smooth}
-body {
- margin:0;
- background:var(--bg);
- color:var(--text);
- font-family:Tahoma,Arial,sans-serif;
- line-height:1.8;
-}
-a {color:inherit;text-decoration:none}
-.container {width:min(1080px,92%);margin:auto}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-header {
- border-bottom:1px solid #29292f;
- background:#0b0b0e;
-}
-nav {
- min-height:70px;
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:12px;
-}
-.logo {
- font-size:27px;
- font-weight:900;
- direction:ltr;
- color:white;
- letter-spacing:1px;
-}
-.logo span {color:var(--red)}
-.navlinks {
- display:flex;
- gap:22px;
- font-size:13px;
- color:#ccc;
-}
-.navlinks a:hover {color:var(--red)}
+  <style>
+    :root {
+      --bg: #090909;
+      --surface: #111111;
+      --surface2: #171717;
+      --red: #e32636;
+      --white: #f5f5f5;
+      --muted: #999999;
+      --border: rgba(255,255,255,.09);
+    }
 
-.hero {
- text-align:center;
- padding:100px 15px 75px;
- background:radial-gradient(ellipse at 50% 10%,#341016 0%,#151015 30%,var(--bg) 72%);
-}
-.eyebrow {
- color:var(--red);
- font-size:12px;
- letter-spacing:4px;
- direction:ltr;
-}
-h1 {
- font-size:clamp(35px,7vw,65px);
- line-height:1.2;
- margin:15px 0;
- direction:ltr;
- font-weight:900;
-}
-h1 span {color:var(--red)}
-.role {font-size:21px;margin:12px 0}
-.intro {
- max-width:570px;
- margin:12px auto;
- color:var(--muted);
- font-size:15px;
-}
-.location {
- color:#999;
- font-size:12px;
- margin-top:18px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.section {padding:55px 0}
-.section-title {
- text-align:center;
- font-size:24px;
- margin:0 0 25px;
-}
-.section-title span {color:var(--red)}
+    html { scroll-behavior: smooth; }
 
-.grid {
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:16px;
-}
-.card {
- background:linear-gradient(145deg,#19191f,#101014);
- border:1px solid #303038;
- border-radius:13px;
- padding:22px;
- text-align:center;
-}
-.symbol {
- font-size:27px;
- color:var(--red);
- margin-bottom:8px;
-}
-.card h3 {font-size:15px;margin:3px 0}
-.card p {
- font-size:12px;
- color:var(--muted);
- margin:0;
-}
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Cairo', sans-serif;
+      line-height: 1.8;
+    }
 
-.about {
- text-align:center;
- max-width:720px;
- margin:auto;
-}
-.about h3 {
- font-size:23px;
- margin:0 0 8px;
-}
-.about p {
- color:var(--muted);
- font-size:15px;
- margin:0;
- line-height:2;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.project {
- max-width:650px;
- margin:auto;
- text-align:right;
- background:linear-gradient(145deg,#1b151a,#111116);
- border:1px solid #493039;
- border-radius:13px;
- padding:22px;
-}
-.project h3 {margin:0 0 6px;color:white}
-.project p {
- color:var(--muted);
- font-size:13px;
- margin:0 0 12px;
-}
-.status {
- display:inline-block;
- color:#ff8792;
- border:1px solid #73323b;
- border-radius:30px;
- padding:2px 12px;
- font-size:11px;
-}
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
 
-/* Contact */
-.contact {
- max-width:550px;
- margin:auto;
- text-align:center;
- background:linear-gradient(145deg,#19151a,#101014);
- border:1px solid #493039;
- border-radius:16px;
- padding:30px 20px;
-}
-.mail-icon {
- width:58px;
- height:58px;
- display:flex;
- align-items:center;
- justify-content:center;
- margin:0 auto 15px;
- border-radius:16px;
- background:#32141a;
- color:var(--red);
- font-size:27px;
-}
-.contact p {
- color:var(--muted);
- font-size:14px;
- margin:0 0 20px;
-}
-.email-button {
- display:inline-flex;
- align-items:center;
- justify-content:center;
- gap:10px;
- padding:12px 24px;
- border-radius:9px;
- background:var(--red);
- color:white;
- font-size:14px;
- font-weight:bold;
- transition:.2s;
-}
-.email-button:hover {
- background:#d91f35;
- transform:translateY(-2px);
-}
-.email-address {
- display:block;
- direction:ltr;
- color:#aaa;
- font-size:12px;
- margin-top:13px;
-}
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
 
-footer {
- border-top:1px solid #29292f;
- text-align:center;
- padding:25px 10px;
- color:#888;
- font-size:12px;
-}
-footer strong {
- color:var(--red);
- direction:ltr;
- display:inline-block;
-}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-@media(max-width:650px) {
- nav {min-height:62px}
- .navlinks {gap:10px;font-size:11px}
- .logo {font-size:23px}
- .hero {padding:75px 12px 55px}
- .role {font-size:18px}
- .intro {font-size:13px}
- .grid {grid-template-columns:1fr;gap:10px}
- .card {padding:16px}
- .section {padding:42px 0}
- .contact {padding:25px 15px}
-}
-</style>
+    .logo {
+      direction: ltr;
+      font-family: 'Inter', sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .logo span { color: var(--red); }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      color: #bdbdbd;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover { color: var(--red); }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 90px 0;
+    }
+
+    .hero-content { max-width: 760px; }
+
+    .eyebrow {
+      color: var(--red);
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      direction: ltr;
+      display: inline-block;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      direction: ltr;
+      text-align: right;
+      font-size: clamp(45px, 9vw, 82px);
+      line-height: 1.15;
+      font-weight: 900;
+      letter-spacing: -3px;
+    }
+
+    h1 span { color: var(--red); }
+
+    .hero h2 {
+      font-size: clamp(20px, 4vw, 29px);
+      margin-top: 22px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 620px;
+      margin-top: 12px;
+    }
+
+    .location {
+      margin-top: 28px;
+      color: #777;
+      font: 600 11px 'Inter', sans-serif;
+      letter-spacing: 3px;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .section {
+      padding: 75px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading small {
+      color: var(--red);
+      font: 700 11px 'Inter', sans-serif;
+      letter-spacing: 3px;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .section-heading h2 {
+      font-size: 29px;
+      margin-top: 8px;
+    }
+
+    .about-text {
+      color: #b4b4b4;
+      font-size: 16px;
+      max-width: 800px;
+      line-height: 2.2;
+    }
+
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .skill-card, .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 25px;
+      transition: .25s ease;
+    }
+
+    .skill-card:hover, .project-card:hover {
+      border-color: rgba(227,38,54,.55);
+      transform: translateY(-4px);
+    }
+
+    .card-mark {
+      color: var(--red);
+      font-size: 25px;
+      margin-bottom: 13px;
+    }
+
+    .skill-card h3, .project-card h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .skill-card p, .project-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .project-status {
+      display: inline-block;
+      color: #ff6875;
+      background: rgba(227,38,54,.10);
+      border: 1px solid rgba(227,38,54,.2);
+      padding: 3px 10px;
+      border-radius: 30px;
+      font-size: 11px;
+      margin-top: 18px;
+    }
+
+    .contact-intro {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 17px 20px;
+      transition: .25s ease;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .social-link:hover {
+      border-color: var(--red);
+      background: var(--surface2);
+      transform: translateY(-3px);
+    }
+
+    .social-icon {
+      width: 43px;
+      height: 43px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      background: rgba(227,38,54,.10);
+      color: #ff5968;
+      font: 800 19px 'Inter', sans-serif;
+      flex-shrink: 0;
+    }
+
+    .social-info strong {
+      display: block;
+      font: 700 14px 'Inter', sans-serif;
+    }
+
+    .social-info span {
+      color: var(--muted);
+      font: 12px 'Inter', sans-serif;
+      display: block;
+      margin-top: 3px;
+    }
+
+    .contact-note {
+      color: #777;
+      font-size: 12px;
+      margin-top: 22px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    footer .footer-logo {
+      font: 800 18px 'Inter', sans-serif;
+      letter-spacing: 3px;
+      direction: ltr;
+    }
+
+    footer .footer-logo span { color: var(--red); }
+
+    footer p {
+      color: #777;
+      font: 10px 'Inter', sans-serif;
+      letter-spacing: 3px;
+      margin-top: 9px;
+      direction: ltr;
+    }
+
+    footer .copyright {
+      color: #555;
+      font: 11px 'Cairo', sans-serif;
+      letter-spacing: 0;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 650px) {
+      .nav-links { gap: 13px; font-size: 12px; }
+      .logo { font-size: 21px; }
+      .hero { min-height: 480px; padding: 65px 0; }
+      .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+      .social-grid { grid-template-columns: 1fr; }
+      .section { padding: 58px 0; }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
- <div class="container">
-  <nav>
-   <a class="logo" href="#">NE<span>X</span></a>
-   <div class="navlinks">
-    <a href="#home">الرئيسية</a>
-    <a href="#about">عني</a>
-    <a href="#projects">مشاريعي</a>
-    <a href="#contact">تواصل معي</a>
-   </div>
-  </nav>
- </div>
-</header>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="#home">MUSTAFA <span>NEX</span></a>
+        <div class="nav-links">
+          <a href="#about">عني</a>
+          <a href="#projects">مشاريعي</a>
+          <a href="#contact">تواصل</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<main>
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">WELCOME TO MY WORLD</span>
+        <h1>MUSTAFA <span>NEX</span></h1>
+        <h2>مبرمج ومطوّر برمجيات وحلول تقنية</h2>
+        <p>
+          أعمل على تطوير المواقع الإلكترونية والتطبيقات والأنظمة البرمجية،
+          وبناء مشاريع تقنية مبتكرة.
+        </p>
+        <span class="location">IRAQ · MOSUL</span>
+      </div>
+    </section>
 
-<section class="hero" id="home">
- <div class="eyebrow">WELCOME TO MY PERSONAL WEBSITE</div>
- <h1>MUSTAFA <span>NEX</span></h1>
- <div class="role">مبرمج ومطوّر برمجيات وحلول تقنية</div>
- <p class="intro">
-  أعمل على تطوير المواقع الإلكترونية والتطبيقات والأنظمة البرمجية،
-  وبناء مشاريع تقنية مبتكرة.
- </p>
- <div class="location">IRAQ · MOSUL</div>
-</section>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <small>ABOUT ME</small>
+          <h2>عني</h2>
+        </div>
+        <p class="about-text">
+          مبرمج ومطوّر مهتم بعالم التقنية وصناعة البرمجيات.
+          أعمل على تطوير مشاريع تقنية من الفكرة إلى التنفيذ،
+          وتصميم تجارب رقمية تجمع بين الوظيفة والابتكار.
+        </p>
+      </div>
+    </section>
 
-<section class="section">
- <div class="container">
-  <h2 class="section-title">مجالات <span>اهتمامي</span></h2>
-  <div class="grid">
+    <section class="section" id="interests">
+      <div class="container">
+        <div class="section-heading">
+          <small>WHAT I DO</small>
+          <h2>مجالات اهتمامي</h2>
+        </div>
 
-   <div class="card">
-    <div class="symbol">⌘</div>
-    <h3>تطوير التطبيقات</h3>
-    <p>تطبيقات الهواتف والأفكار الجديدة</p>
-   </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="card-mark">01</div>
+            <h3>تطوير المواقع</h3>
+            <p>تصميم وتطوير مواقع إلكترونية وتجارب ويب.</p>
+          </div>
 
-   <div class="card">
-    <div class="symbol">&lt;/&gt;</div>
-    <h3>البرمجيات</h3>
-    <p>بناء البرامج والحلول التقنية</p>
-   </div>
+          <div class="skill-card">
+            <div class="card-mark">02</div>
+            <h3>تطوير التطبيقات</h3>
+            <p>أفكار وتطبيقات رقمية تخدم المستخدمين.</p>
+          </div>
 
-   <div class="card">
-    <div class="symbol">✦</div>
-    <h3>المشاريع التقنية</h3>
-    <p>تطوير الأفكار وتحويلها إلى مشاريع</p>
-   </div>
+          <div class="skill-card">
+            <div class="card-mark">03</div>
+            <h3>المشاريع التقنية</h3>
+            <p>بناء منتجات ومشاريع برمجية متكاملة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </div>
- </div>
-</section>
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <small>SELECTED WORK</small>
+          <h2>مشاريعي</h2>
+        </div>
 
-<section class="section" id="about">
- <div class="container">
-  <h2 class="section-title"><span>عني</span></h2>
-  <div class="about">
-   <h3>Founder & Developer</h3>
-   <p>
-    مؤسس ومطوّر مشاريع تقنية، ومبرمج متخصص في تصميم وتطوير
-    المواقع الإلكترونية والتطبيقات والأنظمة البرمجية.
-    أعمل على ابتكار مشاريع تقنية من الفكرة إلى التنفيذ،
-    وصناعة منتجات تحمل رؤيتي وطموحي.
-   </p>
-  </div>
- </div>
-</section>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="card-mark">01 / PROJECT</div>
+            <h3>معاملتي</h3>
+            <p>
+              مشروع تقني يهدف إلى تسهيل وصول المواطنين
+              إلى المعلومات والخدمات والمعاملات.
+            </p>
+            <span class="project-status">قيد التطوير</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="projects">
- <div class="container">
-  <h2 class="section-title">مشاريعي</h2>
-  <div class="project">
-   <h3>معاملتي</h3>
-   <p>
-    مشروع يهدف إلى تسهيل وصول المواطنين إلى معلومات
-    الخدمات والمعاملات.
-   </p>
-   <span class="status">قيد التطوير</span>
-  </div>
- </div>
-</section>
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <small>CONNECT WITH ME</small>
+          <h2>تواصل معي</h2>
+        </div>
 
-<section class="section" id="contact">
- <div class="container">
-  <h2 class="section-title">تواصل <span>معي</span></h2>
-  <div class="contact">
-   <div class="mail-icon">✉</div>
-   <p>
-    للاستفسارات والتعاون والمشاريع التقنية،
-    يسعدني استقبال رسائلك عبر البريد الإلكتروني.
-   </p>
+        <p class="contact-intro">
+          يمكنك التواصل معي ومتابعة حساباتي عبر المنصات التالية.
+        </p>
 
-   <a class="email-button"
-      href="mailto:hello.mustafanex@gmail.com?subject=Contact%20MUSTAFA%20NEX">
-    ✉ تواصل عبر البريد الإلكتروني
-   </a>
+        <div class="social-grid">
 
-   <span class="email-address">hello.mustafanex@gmail.com</span>
-  </div>
- </div>
-</section>
+          <a class="social-link"
+             href="https://www.instagram.com/mustafa.nexx/"
+             target="_blank" rel="noopener noreferrer">
+            <span class="social-icon">IG</span>
+            <span class="social-info">
+              <strong>Instagram</strong>
+              <span>@mustafa.nexx</span>
+            </span>
+          </a>
 
-</main>
+          <a class="social-link"
+             href="https://www.tiktok.com/@mustafa.nexx"
+             target="_blank" rel="noopener noreferrer">
+            <span class="social-icon">TT</span>
+            <span class="social-info">
+              <strong>TikTok</strong>
+              <span>@mustafa.nexx</span>
+            </span>
+          </a>
 
-<footer>
- <strong>DREAM · CODE · INNOVATE</strong>
- <div>© 2026 MUSTAFA NEX · جميع الحقوق محفوظة</div>
-</footer>
+          <a class="social-link"
+             href="https://t.me/bbb7ddd"
+             target="_blank" rel="noopener noreferrer">
+            <span class="social-icon">TG</span>
+            <span class="social-info">
+              <strong>Telegram</strong>
+              <span>@bbb7ddd</span>
+            </span>
+          </a>
+
+          <a class="social-link"
+             href="https://www.facebook.com/share/19W9nAB7Ys/"
+             target="_blank" rel="noopener noreferrer">
+            <span class="social-icon">FB</span>
+            <span class="social-info">
+              <strong>Facebook</strong>
+              <span>Visit my profile</span>
+            </span>
+          </a>
+
+          <a class="social-link"
+             href="mailto:hello.mustafanex@gmail.com">
+            <span class="social-icon">@</span>
+            <span class="social-info">
+              <strong>Email</strong>
+              <span>hello.mustafanex@gmail.com</span>
+            </span>
+          </a>
+
+        </div>
+
+        <p class="contact-note">
+          جميع روابط التواصل أعلاه قابلة للضغط.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">MUSTAFA <span>NEX</span></div>
+      <p>DREAM · CODE · INNOVATE</p>
+      <div class="copyright">
+        © 2026 MUSTAFA NEX. جميع الحقوق محفوظة.
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
