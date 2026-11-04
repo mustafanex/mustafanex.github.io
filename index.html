@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b0b0e">
 <title>MUSTAFA NEX | الموقع الشخصي</title>
-<meta name="description" content="MUSTAFA NEX - مؤسس ومطوّر مشاريع تقنية، متخصص في المواقع والتطبيقات والأنظمة البرمجية.">
+<meta name="description" content="MUSTAFA NEX - مؤسس ومطور مشاريع تقنية، متخصص في تطوير المواقع والتطبيقات والأنظمة البرمجية.">
 
 <style>
 :root {
@@ -33,10 +33,11 @@ header {
  background:#0b0b0e;
 }
 nav {
- height:70px;
+ min-height:70px;
  display:flex;
  align-items:center;
  justify-content:space-between;
+ gap:12px;
 }
 .logo {
  font-size:27px;
@@ -48,7 +49,7 @@ nav {
 .logo span {color:var(--red)}
 .navlinks {
  display:flex;
- gap:24px;
+ gap:22px;
  font-size:13px;
  color:#ccc;
 }
@@ -57,12 +58,7 @@ nav {
 .hero {
  text-align:center;
  padding:100px 15px 75px;
- background:radial-gradient(
- ellipse at 50% 10%,
- #341016 0%,
- #151015 30%,
- var(--bg) 72%
- );
+ background:radial-gradient(ellipse at 50% 10%,#341016 0%,#151015 30%,var(--bg) 72%);
 }
 .eyebrow {
  color:var(--red);
@@ -111,7 +107,7 @@ h1 span {color:var(--red)}
  padding:22px;
  text-align:center;
 }
-.card .symbol {
+.symbol {
  font-size:27px;
  color:var(--red);
  margin-bottom:8px;
@@ -163,6 +159,58 @@ h1 span {color:var(--red)}
  font-size:11px;
 }
 
+/* Contact */
+.contact {
+ max-width:550px;
+ margin:auto;
+ text-align:center;
+ background:linear-gradient(145deg,#19151a,#101014);
+ border:1px solid #493039;
+ border-radius:16px;
+ padding:30px 20px;
+}
+.mail-icon {
+ width:58px;
+ height:58px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ margin:0 auto 15px;
+ border-radius:16px;
+ background:#32141a;
+ color:var(--red);
+ font-size:27px;
+}
+.contact p {
+ color:var(--muted);
+ font-size:14px;
+ margin:0 0 20px;
+}
+.email-button {
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ gap:10px;
+ padding:12px 24px;
+ border-radius:9px;
+ background:var(--red);
+ color:white;
+ font-size:14px;
+ font-weight:bold;
+ transition:.2s;
+}
+.email-button:hover {
+ background:#d91f35;
+ transform:translateY(-2px);
+}
+.email-address {
+ display:block;
+ direction:ltr;
+ color:#aaa;
+ font-size:12px;
+ margin-top:13px;
+}
+
 footer {
  border-top:1px solid #29292f;
  text-align:center;
@@ -177,8 +225,8 @@ footer strong {
 }
 
 @media(max-width:650px) {
- nav {height:62px}
- .navlinks {gap:12px;font-size:11px}
+ nav {min-height:62px}
+ .navlinks {gap:10px;font-size:11px}
  .logo {font-size:23px}
  .hero {padding:75px 12px 55px}
  .role {font-size:18px}
@@ -186,11 +234,13 @@ footer strong {
  .grid {grid-template-columns:1fr;gap:10px}
  .card {padding:16px}
  .section {padding:42px 0}
+ .contact {padding:25px 15px}
 }
 </style>
 </head>
 
 <body>
+
 <header>
  <div class="container">
   <nav>
@@ -199,78 +249,101 @@ footer strong {
     <a href="#home">الرئيسية</a>
     <a href="#about">عني</a>
     <a href="#projects">مشاريعي</a>
+    <a href="#contact">تواصل معي</a>
    </div>
   </nav>
  </div>
 </header>
 
 <main>
- <section class="hero" id="home">
-  <div class="eyebrow">WELCOME TO MY PERSONAL WEBSITE</div>
-  <h1>MUSTAFA <span>NEX</span></h1>
-  <div class="role">مبرمج ومطوّر برمجيات وحلول تقنية</div>
-  <p class="intro">
-   أعمل على تطوير المواقع الإلكترونية والتطبيقات والأنظمة البرمجية،
-   وبناء مشاريع تقنية مبتكرة.
-  </p>
-  <div class="location">IRAQ · MOSUL</div>
- </section>
 
- <section class="section">
-  <div class="container">
-   <h2 class="section-title">مجالات <span>اهتمامي</span></h2>
-   <div class="grid">
+<section class="hero" id="home">
+ <div class="eyebrow">WELCOME TO MY PERSONAL WEBSITE</div>
+ <h1>MUSTAFA <span>NEX</span></h1>
+ <div class="role">مبرمج ومطوّر برمجيات وحلول تقنية</div>
+ <p class="intro">
+  أعمل على تطوير المواقع الإلكترونية والتطبيقات والأنظمة البرمجية،
+  وبناء مشاريع تقنية مبتكرة.
+ </p>
+ <div class="location">IRAQ · MOSUL</div>
+</section>
 
-    <div class="card">
-     <div class="symbol">⌘</div>
-     <h3>تطوير التطبيقات</h3>
-     <p>تطبيقات الهواتف والأفكار الجديدة</p>
-    </div>
+<section class="section">
+ <div class="container">
+  <h2 class="section-title">مجالات <span>اهتمامي</span></h2>
+  <div class="grid">
 
-    <div class="card">
-     <div class="symbol">&lt;/&gt;</div>
-     <h3>البرمجيات</h3>
-     <p>بناء البرامج والحلول التقنية</p>
-    </div>
-
-    <div class="card">
-     <div class="symbol">✦</div>
-     <h3>المشاريع التقنية</h3>
-     <p>تطوير الأفكار وتحويلها إلى مشاريع</p>
-    </div>
-
+   <div class="card">
+    <div class="symbol">⌘</div>
+    <h3>تطوير التطبيقات</h3>
+    <p>تطبيقات الهواتف والأفكار الجديدة</p>
    </div>
-  </div>
- </section>
 
- <section class="section" id="about">
-  <div class="container">
-   <h2 class="section-title"><span>عني</span></h2>
-   <div class="about">
-    <h3>Founder & Developer</h3>
-    <p>
-     مؤسس ومطوّر مشاريع تقنية، ومبرمج متخصص في تصميم وتطوير
-     المواقع الإلكترونية والتطبيقات والأنظمة البرمجية.
-     أعمل على ابتكار مشاريع تقنية من الفكرة إلى التنفيذ،
-     وصناعة منتجات تحمل رؤيتي وطموحي.
-    </p>
+   <div class="card">
+    <div class="symbol">&lt;/&gt;</div>
+    <h3>البرمجيات</h3>
+    <p>بناء البرامج والحلول التقنية</p>
    </div>
-  </div>
- </section>
 
- <section class="section" id="projects">
-  <div class="container">
-   <h2 class="section-title">مشاريعي</h2>
-   <div class="project">
-    <h3>معاملتي</h3>
-    <p>
-     مشروع يهدف إلى تسهيل وصول المواطنين إلى معلومات
-     الخدمات والمعاملات.
-    </p>
-    <span class="status">قيد التطوير</span>
+   <div class="card">
+    <div class="symbol">✦</div>
+    <h3>المشاريع التقنية</h3>
+    <p>تطوير الأفكار وتحويلها إلى مشاريع</p>
    </div>
+
   </div>
- </section>
+ </div>
+</section>
+
+<section class="section" id="about">
+ <div class="container">
+  <h2 class="section-title"><span>عني</span></h2>
+  <div class="about">
+   <h3>Founder & Developer</h3>
+   <p>
+    مؤسس ومطوّر مشاريع تقنية، ومبرمج متخصص في تصميم وتطوير
+    المواقع الإلكترونية والتطبيقات والأنظمة البرمجية.
+    أعمل على ابتكار مشاريع تقنية من الفكرة إلى التنفيذ،
+    وصناعة منتجات تحمل رؤيتي وطموحي.
+   </p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="projects">
+ <div class="container">
+  <h2 class="section-title">مشاريعي</h2>
+  <div class="project">
+   <h3>معاملتي</h3>
+   <p>
+    مشروع يهدف إلى تسهيل وصول المواطنين إلى معلومات
+    الخدمات والمعاملات.
+   </p>
+   <span class="status">قيد التطوير</span>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="container">
+  <h2 class="section-title">تواصل <span>معي</span></h2>
+  <div class="contact">
+   <div class="mail-icon">✉</div>
+   <p>
+    للاستفسارات والتعاون والمشاريع التقنية،
+    يسعدني استقبال رسائلك عبر البريد الإلكتروني.
+   </p>
+
+   <a class="email-button"
+      href="mailto:hello.mustafanex@gmail.com?subject=Contact%20MUSTAFA%20NEX">
+    ✉ تواصل عبر البريد الإلكتروني
+   </a>
+
+   <span class="email-address">hello.mustafanex@gmail.com</span>
+  </div>
+ </div>
+</section>
+
 </main>
 
 <footer>
