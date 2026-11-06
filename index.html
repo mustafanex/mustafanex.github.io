@@ -208,6 +208,32 @@
       margin-top: 18px;
     }
 
+    /* Project visit button */
+    .project-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      margin-top: 22px;
+      padding: 12px 18px;
+      background: var(--red);
+      color: #fff;
+      border: 1px solid var(--red);
+      border-radius: 9px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      transition: .25s ease;
+    }
+
+    .project-action:hover {
+      background: transparent;
+      color: #ff6875;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(227,38,54,.15);
+    }
+
     .contact-intro {
       color: var(--muted);
       margin-bottom: 25px;
@@ -388,15 +414,31 @@
         </div>
 
         <div class="projects-grid">
+
+          <!-- Maamalati Project -->
           <article class="project-card">
             <div class="card-mark">01 / PROJECT</div>
             <h3>معاملتي</h3>
             <p>
-              مشروع تقني يهدف إلى تسهيل وصول المواطنين
-              إلى المعلومات والخدمات والمعاملات.
+              دليل المعاملات العراقية — منصة رقمية
+              تهدف إلى تسهيل وصول المواطنين إلى المعلومات
+              والإجراءات والمتطلبات الخاصة بالمعاملات والخدمات.
             </p>
-            <span class="project-status">قيد التطوير</span>
+
+            <span class="project-status">الموقع متاح للزيارة</span>
+
+            <a
+              class="project-action"
+              href="https://mustafanex.github.io/maamalati-website/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="زيارة موقع معاملتي"
+            >
+              زيارة موقع معاملتي
+              <span>↗</span>
+            </a>
           </article>
+
         </div>
       </div>
     </section>
